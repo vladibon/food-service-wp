@@ -25,24 +25,12 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.svg$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name].[ext]',
+          filename: 'images/[name][ext]',
         },
       },
-      // {
-      //   test: /\.(png|jpe?g|gif|svg)$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[name].[ext]',
-      //         outputPath: 'images',
-      //       },
-      //     },
-      //   ],
-      // },
     ],
   },
   plugins: [
